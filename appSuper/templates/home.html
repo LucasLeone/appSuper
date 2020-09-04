@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div class="home-container">
+        <div class="home-item products">
+            <div class="home-cell home-cell-products">
+                <a href="">
+                    <p>Productos</p>
+                </a>
+            </div>
+        </div>
+        <div class="home-item shopping_cart">
+            <div class="home-cell home-cell-shopping_cart">
+                <a href="">
+                    <p>Carrito</p>
+                </a>
+            </div>
+        </div>
+        <div class="home-item map">
+            <div class="home-cell home-cell-map">
+                <a href="{% url 'map' %}">
+                    <p>Mapa</p>
+                </a>
+            </div>
+        </div>
+        <div class="home-item offers">
+            <div class="home-cell home-cell-offers">
+                <a href="">
+                    <p>Ofertas</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa | Supermercado</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <div class="map-container">
+        <figure class="map-back">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/back.png' %}" alt="">
+            </a>
+        </figure>
+        <figure class="map-img">
+            <img src="{% static 'img/map.jpg' %}" alt="">
+        </figure>
+    </div>
+</body>
+</html>
