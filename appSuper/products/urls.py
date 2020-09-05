@@ -2,14 +2,14 @@
 from django.urls import path
 
 # Views
-from products.views import views
+from products import views
 
 
 urlpatterns = [
     
     path(
         route='',
-        view=views.Feed.as_view(),
+        view=views.ProductsFeed.as_view(),
         name='feed'
     )
 

@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
+    <div class="home-logo">
+        <figure class="home-logo-img">
+            <img src="{% static 'img/logo.png' %}" alt="">
+        </figure>
+    </div>
     <div class="home-container">
         <div class="home-item products">
             <div class="home-cell home-cell-products">
-                <a href="">
+                <a href="{% url 'products:feed' %}">
                     <p>Productos</p>
                 </a>
             </div>

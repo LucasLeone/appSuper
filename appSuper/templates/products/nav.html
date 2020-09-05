@@ -1,0 +1,40 @@
+{% load static %}
+<div class="nav-container">
+    <div class="nav-img-container">
+        <figure class="nav-img">
+            <a href="{% url 'home' %}">
+                <img src="{% static 'img/logo.png' %}" alt="">
+            </a>
+        </figure>
+    </div>
+    <div class="nav-menu">
+        <ol>
+            <li class="nav-link">
+                <a href="{% url 'map' %}">
+                    Mapa
+                </a>
+            </li>
+        </ol>
+        <ol>
+            <li class="nav-link">
+                <a href="{% url 'home' %}">
+                    Inicio
+                </a>
+            </li>
+        </ol>
+        <ol>
+            <li class="nav-link">
+                <a href="">
+                    Ofertas
+                </a>
+            </li>
+        </ol>
+    </div>
+    <div class="nav-shopping_cart">
+        <figure class="nav-shop">
+            <a href="">
+                <img src="{% static 'img/shopping_cart.png' %}" alt="" width=50px>
+            </a>
+        </figure>
+    </div>
+</div>
