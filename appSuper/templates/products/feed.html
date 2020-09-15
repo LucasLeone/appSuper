@@ -1,1 +1,13 @@
 {% extends 'products/base.html' %}
+
+{% block head %}
+    <title>Productos | appSuper</title>
+{% endblock head %}
+
+{% block body %}
+    <div class="feed-container">
+        {% for product in products %}
+            {% include 'products/product_card.html' %}
+        {% endfor %}
+    </div>
+{% endblock body %}

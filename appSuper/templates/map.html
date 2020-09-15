@@ -8,12 +8,8 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
+    {% include 'products/nav.html' %}
     <div class="map-container">
-        <figure class="map-back">
-            <a href="{% url 'home' %}">
-                <img src="{% static 'img/back.png' %}" alt="">
-            </a>
-        </figure>
         <figure class="map-img">
             <img src="{% static 'img/map.jpg' %}" alt="">
         </figure>

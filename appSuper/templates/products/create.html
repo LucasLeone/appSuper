@@ -1,0 +1,58 @@
+{% extends 'products/base.html' %}
+
+{% block head %}
+    <title>
+        Crear producto | appSuper
+    </title>
+{% endblock head %}
+
+{% block body %}
+    <div class="create-container">
+        <form action="POST" enctype="multipart/form-data" class="create-form">
+            {% csrf_token %}
+            <h3 class="create-title">Crear producto</h3>
+            <div class="create-new-group create-name-group">
+                <label class="create-name">Nombre:</label>
+                <input
+                type="text"
+                name="name"
+                class="create-new-input create-name-input {% if form.name.errors %}is-invalid{% endif %}"
+                >
+
+                <div class="create-new-group-error">
+                    {% for error in form.name.errors %}{{ error }}{% endfor %}
+                </div>
+            </div>
+
+            <div class="create-new-group create-price-group">
+                <label class="create-price">Precio:</label>
+                <input
+                type="text"
+                name="price"
+                class="create-new-input create-price-input {% if form.price.errors %}is-invalid{% endif %}"
+                placeholder="$"
+                >
+
+                <div class="create-new-group-error">
+                    {% for error in form.price.errors %}{{ error }}{% endfor %}
+                </div>
+            </div>
+            
+            <div class="create-new-group create-photo-group">
+                <label class="create-photo">Foto:</label>
+                <input
+                type="file"
+                name="photo"
+                class="create-new-input create-photo-input {% if form.photo.errors %}is-invalid{% endif %}"
+                >
+
+                <div class="create-new-group-error">
+                    {% for error in form.photo.errors %}{{ error }}{% endfor %}
+                </div>
+            </div>
+
+            <button class="create-btn" type="submit">Crear</button>
+
+        </form>
+    </div>
+{% endblock body %}

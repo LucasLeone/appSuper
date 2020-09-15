@@ -1,0 +1,17 @@
+<div class="product-container">
+    <div class="product-items">
+        <figure class="product-img photo">
+            <img src="{{ product.photo.url }}" alt="">
+        </figure>
+        <div class="product-text text">
+            <p class="product-title title">{{ product.name }}</p>
+            {% if product in offers %}
+                <p class="product-price price" style="text-decoration: line-through;">${{ product.price }}</p>
+                <p class="product-price price">${{ offers.new_price }}</p>
+            {% else %}
+                <p class="product-price price">${{ product.price }}</p>
+            {% endif %}
+            <button class="product-btn button" type="submit">Agregar al carrito</button>
+        </div>
+    </div>
+</div>

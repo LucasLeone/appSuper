@@ -17,6 +17,13 @@
         </ol>
         <ol>
             <li class="nav-link">
+                <a href="">
+                    Ofertas
+                </a>
+            </li>
+        </ol>
+        <ol>
+            <li class="nav-link">
                 <a href="{% url 'home' %}">
                     Inicio
                 </a>
@@ -24,8 +31,15 @@
         </ol>
         <ol>
             <li class="nav-link">
-                <a href="">
-                    Ofertas
+                <a href="{% url 'products:feed' %}">
+                    Productos
+                </a>
+            </li>
+        </ol>
+        <ol>
+            <li class="nav-link">
+                <a href="{% url 'products:search' %}">
+                    <img src="{% static 'img/lupa.png' %}" alt="" class="nav-lupa">
                 </a>
             </li>
         </ol>

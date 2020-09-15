@@ -1,0 +1,30 @@
+{% extends 'products/base.html' %}
+
+{% block head %}
+    <title>Buscar producto | Supermercado</title>
+{% endblock head %}
+
+{% block body %}
+    <div class="search-container">
+        <h2 class="search-title">Buscar producto</h2>
+        <form action="." method="GET">
+            <div class="search-inputs">
+                <input class="search-input" type="text" name="q" value="{{ query|escape }}">
+                <input class="search-input-btn" type="submit" value="Buscar">
+            </div>
+        </form>
+
+        {% if query %}
+            <h3 class="search-results-h3">Resultados de "{{ query|escape }}":</h3>
+            <div class="results-container">
+                {% if results %}
+                    {% for product in results %}
+                        {% include 'products/product_card.html' %}
+                    {% endfor %}
+                {% else %}
+                    <p>No se encontraron productos</p>
+                {% endif %}
+            </div>
+        {% endif %}
+    </div>
+{% endblock body %}
