@@ -5,11 +5,13 @@
         </figure>
         <div class="product-text text">
             <p class="product-title title">{{ product.name }}</p>
-            {% if product in offers %}
-                <p class="product-price price" style="text-decoration: line-through;">${{ product.price }}</p>
-                <p class="product-price price">${{ offers.new_price }}</p>
+            {% if product.price_offer != Null %}
+                <div class="price">
+                    <p class="product-price price" style="text-decoration: line-through; color: red;">${{ product.price }}</p>
+                    <p style="margin: 0;">${{ product.price_offer }}</p>
+                </div>
             {% else %}
-                <p class="product-price price">${{ product.price }}</p>
+                <p class="product-price price">{{ product.price }}</p>
             {% endif %}
             <button class="product-btn button" type="submit">Agregar al carrito</button>
         </div>

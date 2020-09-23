@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     # Local
     'shopping_cart',
     'products',
-    'offers'
 ]
 
 MIDDLEWARE = [

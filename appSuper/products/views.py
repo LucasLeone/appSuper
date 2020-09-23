@@ -1,7 +1,7 @@
 # Django
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, TemplateView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.db.models import Q
 
@@ -23,6 +23,13 @@ class CreateProduct(CreateView):
     template_name = 'products/create.html'
     form_class = ProductForm
     success_url = reverse_lazy("products:feed")
+
+
+class OffersFeed(ListView):
+    template_name = 'products/offers.html'
+    model = Product
+    ordering = ('-created')
+    context_object_name = 'products'
 
 
 def searchProduct(request):

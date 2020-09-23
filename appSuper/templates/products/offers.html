@@ -1,0 +1,15 @@
+{% extends 'products/base.html' %}
+
+{% block head %}
+    <title>Ofertas | Supermercado</title>
+{% endblock head %}
+
+{% block body %}
+    <div class="feed-container">
+        {% for product in products %}
+            {% if product.price_offer != Null %}
+                {% include 'products/product_card.html' %}
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock body %}

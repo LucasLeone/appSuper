@@ -23,6 +23,12 @@ urlpatterns = [
         route='search/',
         view=views.searchProduct,
         name='search'
-    )
+    ),
+
+    path(
+        route='offers/',
+        view=views.OffersFeed.as_view(),
+        name='offers'
+    ),
 
 ]
