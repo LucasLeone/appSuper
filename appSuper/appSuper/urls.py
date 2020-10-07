@@ -13,7 +13,7 @@ urlpatterns = [
 
     #   Apps
     path('products/', include(('products.urls', 'products'), namespace='products')),
-    # path('shopping_cart/', include(('shopping_cart.urls', 'shopping_cart'), namespace='shopping_cart')),
+    path('shopping_cart/', include(('shopping_cart.urls', 'shopping_cart'), namespace='shopping_cart')),
 
     #   Local
     path(
