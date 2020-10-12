@@ -1,13 +1,14 @@
 {% extends '../products/base.html' %}
+{% load static %}
 
 {% block head %}
     <title>Carrito | Supermercado</title>
 {% endblock head %}
 
 {% block body %}
-    {% for product in products %}
-        <p>{{ product }}</p>
-        <p>{{ product.quantity }}</p>
-        <p>{{ product.price }}</p>
+    {% for order in object_list %}
+        <p>{{ order.item.product }}</p>
+        <p>{{ order.item.quantity }}</p>
+        <p>${{ order.item.get_price }}</p>
     {% endfor %}
 {% endblock body %}

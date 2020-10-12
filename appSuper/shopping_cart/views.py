@@ -17,6 +17,6 @@ class AddItem(CreateView):
 
 class ListCart(ListView):
 
-    model = OrderItem
+    model = Order
     template_name = 'shop_cart/cart.html'
-    context_object_name = 'products'
+    # context_object_name = 'products'
